@@ -1,0 +1,237 @@
+.hero-btn2 {
+  margin-left: 230px;
+  
+}
+
+button {
+    background: none;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    color: $white-color;
+    cursor: pointer;
+    
+  
+    
+    &.slash {
+      border-radius: 50%;
+      height: 3px;
+      left: 130px;
+      position: relative;
+      text-indent: -9999em;
+      top: -10px;
+      transition: all .2s ease-in;
+      width: 3px;
+      filter: drop-shadow( 0px 4px 5px rgba(35, 1, 1, 0.26));
+      
+      &:before, &:after {
+        background: $red-color1;
+        content: attr(data-content);
+        height: 40px;
+        left: -130px;
+        line-height: 40px;
+        position: absolute;
+        text-indent: 0;
+        top: 10px;
+        transition: all .2s ease-in;
+        width: 200px;
+      }
+      &:before {
+        clip-path: polygon(0 0, 121px 0, 81px 40px, 0 40px);
+      }
+      &:after {
+        clip-path: polygon(120px 0, 200px 0, 200px 40px, 80px 40px);
+        
+        
+      }
+      &:hover {
+        animation: slash .2s ease-in forwards;
+        background: tomato;
+        box-shadow:
+          1px -1px 1px 0 rgba(tomato, .6),
+          2px -2px 1px 0 rgba(orangered, .6),
+          3px -3px 1px 0 rgba(mix(orangered, orange), .6),
+          4px -4px 1px 0 rgba(orange, .6),
+          5px -5px 1px 0 rgba(mix(orange, gold), .6),
+          6px -6px 1px 0 rgba(gold, .6),
+        ;
+        left: 70px;
+        top: 50px;
+        &:before {
+          left: -127px;
+          top: 7px;
+          left: -67px;
+          top: -53px;
+        }
+        &:after {
+            background: $black-color;
+          color: white;
+          left: -132px;
+          top: 13px;
+          left: -72px;
+          top: -47px;
+        }
+      }
+    }
+  }
+  @keyframes slash {
+    0% {
+      background: none;
+      box-shadow:
+        1px -1px 1px 0 rgba(tomato, 0),
+        2px -2px 1px 0 rgba(orangered, 0),
+        3px -3px 1px 0 rgba(mix(orangered, orange), 0),
+        4px -4px 1px 0 rgba(orange, 0),
+        5px -5px 1px 0 rgba(mix(orange, gold), 0),
+        6px -6px 1px 0 rgba(gold, 0),
+      ;
+    }
+    50% {
+      background: tomato;
+      box-shadow:
+        1px -1px 1px 0 rgba(tomato, .6),
+        2px -2px 1px 0 rgba(orangered, .6),
+        3px -3px 1px 0 rgba(mix(orangered, orange), .6),
+        4px -4px 1px 0 rgba(orange, .6),
+        5px -5px 1px 0 rgba(mix(orange, gold), .6),
+        6px -6px 1px 0 rgba(gold, .6),
+      ;
+    }
+    100% {
+      background: none;
+      box-shadow:
+        1px -1px 1px 0 rgba(tomato, 0),
+        2px -2px 1px 0 rgba(orangered, 0),
+        3px -3px 1px 0 rgba(mix(orangered, orange), 0),
+        4px -4px 1px 0 rgba(orange, 0),
+        5px -5px 1px 0 rgba(mix(orange, gold), 0),
+        6px -6px 1px 0 rgba(gold, 0),
+      ;
+    }
+  }
+
+.btn-2 {
+
+  background: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  color: $white-color;
+  cursor: pointer;
+
+  @include responsive(xs) {
+    display: none;
+  }
+  
+  &.slash-2 {
+    border-radius: 50%;
+    height: 3px;
+    left: 130px;
+    position: relative;
+    text-indent: -9999em;
+    top: -10px;
+    transition: all .2s ease-in;
+    width: 3px;
+    filter: drop-shadow( 0px 4px 5px rgba(35, 1, 1, 0.26));
+    
+    &:before, &:after {
+      background: $black-color;
+      content: attr(data-content);
+      height: 40px;
+      left: -130px;
+      line-height: 40px;
+      position: absolute;
+      text-indent: 0;
+      top: 10px;
+      transition: all .2s ease-in;
+      width: 200px;
+    }
+    &:before {
+      clip-path: polygon(0 0, 121px 0, 81px 40px, 0 40px);
+    }
+    &:after {
+      clip-path: polygon(120px 0, 200px 0, 200px 40px, 80px 40px);
+      
+      
+    }
+    &:hover {
+      animation: slash .2s ease-in forwards;
+      background: tomato;
+      box-shadow:
+        1px -1px 1px 0 rgba(tomato, .6),
+        2px -2px 1px 0 rgba(orangered, .6),
+        3px -3px 1px 0 rgba(mix(orangered, orange), .6),
+        4px -4px 1px 0 rgba(orange, .6),
+        5px -5px 1px 0 rgba(mix(orange, gold), .6),
+        6px -6px 1px 0 rgba(gold, .6),;
+      left: 70px;
+      top: 50px;
+      &:before {
+        left: -127px;
+        top: 7px;
+        left: -67px;
+        top: -53px;
+      }
+      &:after {
+          background: $black-color;
+        color: white;
+        left: -132px;
+        top: 13px;
+        left: -72px;
+        top: -47px;
+      }
+    }
+  }
+}
+
+@keyframes slash {
+  0% {
+    background: none;
+    box-shadow:
+      1px -1px 1px 0 rgba(tomato, 0),
+      2px -2px 1px 0 rgba(orangered, 0),
+      3px -3px 1px 0 rgba(mix(orangered, orange), 0),
+      4px -4px 1px 0 rgba(orange, 0),
+      5px -5px 1px 0 rgba(mix(orange, gold), 0),
+      6px -6px 1px 0 rgba(gold, 0),
+    ;
+  }
+  50% {
+    background: tomato;
+    box-shadow:
+      1px -1px 1px 0 rgba(tomato, .6),
+      2px -2px 1px 0 rgba(orangered, .6),
+      3px -3px 1px 0 rgba(mix(orangered, orange), .6),
+      4px -4px 1px 0 rgba(orange, .6),
+      5px -5px 1px 0 rgba(mix(orange, gold), .6),
+      6px -6px 1px 0 rgba(gold, .6),
+    ;
+  }
+  100% {
+    background: none;
+    box-shadow:
+      1px -1px 1px 0 rgba(tomato, 0),
+      2px -2px 1px 0 rgba(orangered, 0),
+      3px -3px 1px 0 rgba(mix(orangered, orange), 0),
+      4px -4px 1px 0 rgba(orange, 0),
+      5px -5px 1px 0 rgba(mix(orange, gold), 0),
+      6px -6px 1px 0 rgba(gold, 0),
+    ;
+  }
+
+}
+
+
+
+.btn-2-menu {
+  border: 1px solid $black-color;
+  background-color: $black-color;
+  padding: 8px 54px;
+  text-transform: uppercase;
+
+  &:hover {
+    color:$white-color;
+    transition: .4s ease;
+    background-color: $red-color1;
+  }
+}

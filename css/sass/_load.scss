@@ -1,0 +1,134 @@
+
+.slash-animation{
+    background-color: rgba(0, 0, 0, 1);
+    display: block;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+}
+
+.shime {
+    display: block;
+    left: 3%;
+    top: 59%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    opacity: 1;
+    z-index: 10000000;
+    
+}
+
+
+
+#shime-grup {
+    transform-origin: center center;
+    transform-box: fill-box;
+    opacity: 0;
+    animation: gear1 .8s forwards .5s cubic-bezier(.23,.54,.63,.95); 
+}
+
+
+
+
+@keyframes gear1 {
+    0% { transform: rotateZ(135deg) scale(1); opacity: 0; }
+	25% { transform: rotateZ(65deg) scale(1.5); opacity: .5; }
+	100% { transform: rotateZ(-35deg) scale(1); opacity: 0; }
+}
+
+
+
+.slashan {
+    background: rgba(255, 255, 255, 0);
+    width: 100%;
+    height: .01rem;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%,-50%);
+    transform: rotate(-4deg);
+    z-index: 100000000;
+} 
+
+
+
+.slashan > div {
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    top: 0;
+    left: 20px;
+    background-color: rgb(255, 255, 255);
+    animation: move-in .5s 1.5s forwards  ease-in-out;
+    
+}
+
+@keyframes move-in {
+    0% { left: -20%; opacity: 1; }
+    50% { left: 20%; width: 100%; }
+    100% { opacity: 0;}
+}
+
+
+
+
+.slash-animation.top1{
+    clip-path: polygon(100% 0%, 100% 44%, 0% 57%, 0% 0%);
+    z-index: 10000000;
+    animation: slash-up 0.5s 3.5s cubic-bezier(0, 0.85, 1, 1) forwards;
+}
+
+@keyframes slash-up {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-58%);
+        
+    }
+}
+
+.slash-animation.border1{
+    clip-path: polygon(100% 0%, 100% 44.1%, 0% 57.1%, 0% 0%);
+    opacity: 0;
+    background-color: white;
+    z-index: 9000000;
+    animation: slash-border 1s 2.5s ease-in;
+    pointer-events: none;
+}
+
+@keyframes slash-border {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+.slash-animation.bottom1{
+    clip-path: polygon(100% 43%, 100% 100%, 0% 100%, 0% 56%);
+    z-index: 8000000;
+    animation: slash-down 0.5s 3.5s cubic-bezier(0, 0.85, 1, 1) forwards;
+}
+
+
+@keyframes slash-down {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(57%);
+        visibility: hidden;
+        
+        
+    }
+} 
+
+

@@ -1,0 +1,396 @@
+#home {
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    transition: .5s ease;
+}
+
+.menuscroll-active {
+    background: $bg-color;
+    box-shadow: 0px 13px 11px rgba(24, 24, 24, 0.15);
+}
+
+//NAVBAR DESKTOP 
+
+.navmenu-desktop{
+    max-width: $container-xl;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin:  0 auto;
+    padding: 20px 16px;
+
+    @include responsive(s) {
+        display: none;
+    }
+}
+
+.list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    list-style-type: none;
+    position: relative;
+
+    span {
+        padding: 12px 12px;
+        font-size: 1.25rem;
+        margin-right: .5rem;
+        font-family: 'Mukta', sans-serif;
+        font-weight: 500;
+        color:$black-color;
+        transition: .4s ease;
+        cursor: pointer;
+
+        &:hover {
+            color: $red-color1;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 40%;
+            right: -3px;
+            width: 9px;
+            height: 9px;
+            transform: rotate(45deg);
+            border-radius: 1px;
+            border-bottom: 3px solid $black-color;
+            border-right: 3px solid $black-color;
+            transition: .2s ease;
+        }
+    
+        &:hover {
+                
+            &::after {
+                top: 45%;
+            }
+        }
+    }   
+}
+
+.nav-link {
+    padding: 12px 12px;
+    font-size: 1.25rem;
+    margin-right: .5rem;
+    font-family: 'Mukta', sans-serif;
+    font-weight: 500;
+    color:$black-color;
+    text-decoration: none;
+    position: relative;
+    transition: .4s ease;
+    
+
+    &:hover {
+        color: $red-color1;
+
+        &::after {
+            top: -5px;
+            right: -10px;
+            opacity: 1;
+        }
+    }
+   
+    &::after {
+        content: '';
+        position: absolute;
+        top: -20px;
+        overflow: hidden;
+        right: -20px;
+        width: 30px;
+        height: 30px;
+        opacity: 0;
+        background-image: url('../img/hashi.svg');
+        background-repeat: no-repeat  !important;
+        transition: .4s ease;
+        
+    }
+}
+
+.dropdown-menu {
+    background: $orange-pergamin;
+    position: absolute;
+    padding: 10px;
+    top: 42px;
+    left: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border: 2px solid $black-color;
+    box-shadow: 0px 13px 11px rgba(24, 24, 24, 0.15);
+    opacity: 0;
+    pointer-events: none;
+    transition: .7s ease;
+}
+
+.active-dropdown-menu {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.dropdown-item {
+    width: 150px;
+    
+    list-style-type: none;
+}
+
+.navlink-dropdown {
+    display: inline-block;
+    width: 100%;
+    padding: 8px 10px;
+    margin-top: 5px;
+    font-size: 1.25rem;
+    font-family: 'Mukta', sans-serif;
+    font-weight: 500;
+    color:$black-color;
+    text-decoration: none;
+    position: relative;
+    transition: .4s ease;
+    
+
+    &:hover {
+        color: $red-color1;
+
+        &::after {
+            top: -5px;
+            right: -10px;
+            opacity: 1;
+        }
+    }
+   
+    &::after {
+        content: '';
+        position: absolute;
+        top: -20px;
+        overflow: hidden;
+        right: -20px;
+        width: 30px;
+        height: 30px;
+        opacity: 0;
+        background-image: url('../img/hashi.svg');
+        background-repeat: no-repeat  !important;
+        transition: .4s ease;
+        
+    }
+}
+
+//NAVlOGO 
+
+.logo-sushi {
+    width: 200px;
+    position: relative;
+    left: -100px;
+
+    @include responsive(s) {
+        left: 0;
+    }
+    @include responsive(m) {
+        left: 10px;
+    }
+}
+//CONTACT BTN
+
+.btn-contact {
+  
+    .contact {
+        display: block;
+        padding: 8px 42px;
+        font-size: 1.02rem;
+        font-family: 'Yuji Syuku', serif;
+        border: 1px solid $black-color;
+        color:$black-color;
+        text-transform: uppercase;
+        position: relative;
+        text-decoration: none;
+        overflow: hidden;
+        transition: .4s ease;
+        filter: drop-shadow( 0px 10px 11px rgba(35, 1, 1, 0.26));
+        
+         &:hover {
+            color: $white-color;
+            background-color: $red-color1;
+            border: 1px solid $black-color2;
+         }
+    }
+}
+
+
+
+
+//NAVBAR MOBILE
+
+.navbar-mobile {
+    max-width: $container-xl;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    margin:  0 auto;
+    padding: 16px 24px;
+    
+    
+    display: none;
+      @include responsive(s) {
+        display: flex;
+    }
+ 
+}
+
+.logo-mobile {
+    @include responsive(s) {
+        width: 190px;
+    }
+}
+
+//MENU HAMBURGUER
+
+.menu-btn {
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    position: fixed;
+    z-index: 100000;
+    margin: 10px 16px;
+    
+}
+
+.menu-btn-burger {
+    width: 35px;
+    height: 3px;
+    background: $black-color;
+    transition: all .5s ease-in-out;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 35px;
+        height: 3px;
+        background: $black-color;
+        transform: translateY(10px);
+        transition: all .5s ease-in-out;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 35px;
+        height: 3px;
+        background: $black-color;
+        transform: translateY(-10px);
+        transition: all .5s ease-in-out;
+    }
+}
+
+//Animation menu
+
+.menu-btn.open .menu-btn-burger {
+    transform: translateX(-50px);
+    background: transparent;
+ 
+}
+
+
+.menu-btn.open .menu-btn-burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+    background-color: $red-color1;
+}
+
+.menu-btn.open .menu-btn-burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+    background-color: $red-color1;
+}
+
+
+
+.menu-mobile {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: $bg-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    pointer-events: none;
+    transition: .5s ease;
+    background-image: url("../img/koi\ fish-white.svg");
+    background-position: center;
+    background-size: 390px;
+    background-repeat: no-repeat;
+    transform: scale(0);
+    border: 10px solid $black-color2;
+    
+    
+
+    .nav-mobile {
+        list-style-type: none;
+    }
+
+}
+
+.menu-mobile-active {
+    opacity: 1;
+    pointer-events: all;
+    transform: scale(1);
+   
+}
+
+
+
+
+
+.nav-link-mobile {
+    display: block;
+	font-size: 1.5rem;
+    color: $black-color2;
+    font-family: 'Mukta', sans-serif;
+    font-weight: 500;
+    padding: 8px 16px;
+    margin-bottom: 8px;
+	position: relative;
+    text-decoration: none;  
+	text-transform: uppercase;
+	transition: .4s ease;
+	
+
+    &:hover {
+        color: $red-color1;
+    }
+}
+
+
+
+
+
+
+
+.nav-link-mobile::after {
+	content: "";
+	height: 1px;
+	width: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: $black-color2;
+	transition: .4s ease;
+}
+.nav-link-mobile:hover::after {
+	width: 120%;
+	outline: 1px solid $black-color;
+}
+

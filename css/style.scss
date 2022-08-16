@@ -1,0 +1,48 @@
+*,*::after,*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@import "sass/load";
+@import "sass/colors";
+@import "sass/layout";
+@import "sass/typography";
+@import "sass/menu";
+@import "sass/buttons";
+
+body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+}
+  
+  body::-webkit-scrollbar-track {
+    background: #FED8C8;        /* color of the tracking area */
+}
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: $orange-pergamin;  
+    border: 1px solid $black-color;  /* color of the scroll thumb */
+       /* roundness of the scroll thumb */
+    /* creates padding around scroll thumb */
+}
+
+.border {
+    border: 1px solid rgb(0, 0, 0);
+}
+body {
+    width: 100%;
+    background-color: $bg-color;
+    animation: body-wait 12s ease forwards;
+}
+
+.none {
+    display: none;
+}
+svg, img {
+    display: inline-block;
+    width: 100%
+}
+
+
+@import "sass/spacing";
+@import "sass/animations";

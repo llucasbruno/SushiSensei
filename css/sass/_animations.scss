@@ -1,0 +1,173 @@
+//ANIMATION HERO
+
+#Sushi-1 {
+    transform-origin: center center;
+    transform-box: fill-box;
+    animation: sushi 6s  linear infinite alternate ;
+}
+
+#rice {
+    transform-origin: center center;
+    transform-box: fill-box;
+    animation: rice 8s  ease-out infinite alternate ;
+}
+
+@keyframes sushi {
+    0% {
+        transform: translate3d(0,0,0)rotate(90deg) ;
+        
+    }
+  
+    100% {
+        transform: translate3d(0,-30px,0) rotate(180deg);
+    }
+}
+
+@keyframes rice {
+    0% {
+        transform: translate3d(0,0,0) ;
+        
+    }
+  
+    100% {
+        transform: translate3d(0,-50px,0);
+    }
+}
+
+#Sushi-2 {
+    transform-origin: center center;
+    transform-box: fill-box;
+    animation: sushi-2 8s  linear infinite alternate ;
+}
+
+#rice-2 {
+    transform-origin: center center;
+    transform-box: fill-box;
+    animation: rice-2 11s  linear infinite alternate ;
+}
+
+@keyframes sushi-2 {
+    0% {
+        transform: translate3d(0,0,0)rotate(35deg) ;
+        
+    }
+  
+    100% {
+        transform: translate3d(-40px,-20px,0) rotate(90deg);
+    }
+}
+@keyframes rice-2 {
+    0% {
+        transform: translate3d(0,20px,0)rotate(20deg) ;
+        
+    }
+  
+    100% {
+        transform: translate3d(-30px,-10px,0) rotate(90deg);
+    }
+}
+
+#sushi-3 {
+    transform-origin: center center;
+    transform-box: fill-box;
+    animation: sushi-3 16s  linear infinite alternate ;
+}
+
+@keyframes sushi-3 {
+    0% {
+        transform: translate3d(5px,40px,0)rotate(-35deg) ;
+        
+    }
+    50% {
+        transform: translate3d(-40px,-20px,0) rotate(90deg);
+    }
+    100% {
+        transform: translate3d(-10px,20px,0) rotate(180deg);
+    }
+}
+
+#rice-3 {
+    transform-origin: center center;
+    transform-box: fill-box;
+    animation: rice-3 11s  linear infinite alternate ;
+}
+
+@keyframes rice-3 {
+    0% {
+        transform: translate3d(0,30px,0)rotate(4deg) ;
+        
+    }
+  
+    100% {
+        transform: translate3d(-40px,-5px,0) rotate(7deg);
+    }
+}
+#sushi-4 {
+    transform-origin: center center;
+    transform-box: fill-box;
+    animation: sushi-4 16s  linear infinite alternate ;
+}
+
+@keyframes sushi-4 {
+    0% {
+        transform: translate3d(5px,-40px,0)rotate(-35deg) ;
+        
+    }
+    50% {
+        transform: translate3d(-40px,-20px,0) rotate(65deg);
+    }
+    100% {
+        transform: translate3d(-10px,20px,0) rotate(90deg);
+    }
+}
+
+#rice-4 {
+    transform-origin: center center;
+    transform-box: fill-box;
+    animation: rice-4 9s  linear infinite alternate ;
+}
+
+@keyframes rice-4 {
+    0% {
+        transform: translate3d(0,10px,0)rotate(4deg) ;
+        
+    }
+  
+    100% {
+        transform: translate3d(-40px,-5px,0) rotate(7deg);
+    }
+}
+
+
+
+
+@keyframes body-wait {
+    0% {
+        overflow: hidden;
+        
+    }
+
+    100% {
+        overflow:visible;
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

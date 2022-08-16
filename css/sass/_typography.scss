@@ -1,0 +1,102 @@
+@mixin typeface-1($size, $device: desktop) {
+    
+
+    //H1
+    @if $size == h1 and $device == desktop {
+        font-size: 4.5rem;
+        line-height: 100%;
+        
+    } @else if $size == h1 and $device == mobile {
+        font-size: 2.5rem;
+        line-height: 120%;
+    }
+    //H2
+    @if $size == h2 and $device == desktop {
+        font-size: 2.5rem;
+        line-height: 100%;
+        
+    } @else if $size == h2 and $device == mobile {
+        font-size: 1.8rem;
+        line-height: 120%;
+    }
+    //H3
+    @if $size == h3 and $device == desktop {
+        font-size: 1.5rem;
+        line-height: 100%;
+        
+    } @else if $size == h3 and $device == mobile {
+        font-size: 1.2rem;
+        line-height: 120%;
+    }
+    //H5
+    @if $size == h5 and $device == desktop {
+        font-size: 1.2rem;
+        line-height: 100%;
+        
+    } @else if $size == h5 and $device == mobile {
+        font-size: 1rem;
+        line-height: 120%;
+    }
+
+    //H6
+    @if $size == h6 and $device == desktop {
+        font-size: 1.5rem;
+        line-height: 100%;
+        
+    } @else if $size == h6 and $device == mobile {
+        font-size: 1.2rem;
+        line-height: 120%;
+    }
+
+}
+
+//typeface-2 
+
+@mixin typeface-2 ($size: p2, $device: desktop) {
+    font-family: 'Mukta', sans-serif;
+    
+
+    //
+    @if $size == p1 and $device == desktop {
+        font-size: 32px;
+        line-height: 130%;
+    } @else if $size == p1 and $device == mobile {
+        font-size: 24px;
+        line-height: 130%;
+    }
+
+    //
+    @if $size == p2 and $device == desktop {
+        font-size: 16px;
+        line-height: 140%;
+    } @else if $size == p2 and $device == mobile {
+        font-size: 14px;
+        line-height: 150%;
+    }
+}
+
+h2 {
+    color: $black-color2;
+    @include typeface-1(h2, desktop ) ;
+    font-family: 'Mukta', sans-serif;
+    @include responsive(s) {
+        @include typeface-1(h2, mobile ) 
+    }
+       
+}   
+h3 {
+    
+    color: $black-color2;
+    @include typeface-1(h3, desktop ) ;
+
+    @include responsive(s) {
+        @include typeface-1(h3, mobile ) 
+    }
+       
+}   
+
+p {
+    color: $black-color;
+    @include typeface-2(p2, desktop )
+}
+
